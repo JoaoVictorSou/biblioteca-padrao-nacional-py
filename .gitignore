@@ -1,0 +1,6 @@
+# DIRETÓRIOS
+__pycache__/
+
+# ARQUIVOS
+# Acerca do main.py: o escopo do projeto é passar apenas a biblioteca; optei por não poluir o projeto com os meus usos.
+main.py

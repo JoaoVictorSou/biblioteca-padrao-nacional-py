@@ -8,7 +8,7 @@ class Cnpj:
             raise ValueError("CPNJ inválido!")
 
     def __str__(self):
-        return self.__numero_documento
+        return Cnpj.monta_mascara(self.__numero_documento)
 
     @staticmethod
     def cnpj_valido(numero_cnpj):
@@ -22,3 +22,8 @@ class Cnpj:
             return cnpj.validate(numero_cnpj)
         else:
             raise ValueError("CNPJ deve conter 14 dígitos!")
+    
+    @staticmethod
+    def monta_mascara(numero_cnpj):
+        cnpj = CNPJ()
+        return cnpj.mask(numero_cnpj)

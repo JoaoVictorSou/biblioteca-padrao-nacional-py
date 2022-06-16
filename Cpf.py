@@ -2,7 +2,7 @@ from validate_docbr import CPF
 
 class Cpf:
     def __init__(self, numero_cpf: str):
-        if Cpf.cpf_valido(numero_cpf):
+        if Cpf.valido(numero_cpf):
             self.__numero_documento = numero_cpf
         else:
             raise ValueError("CPF não segue regras estabelecidas.")
@@ -11,7 +11,7 @@ class Cpf:
         return Cpf.monta_mascara(self.__numero_documento)
 
     @staticmethod
-    def cpf_valido(numero_cpf: str):
+    def valido(numero_cpf: str):
         # Verificação se há apenas números no valor informado
         int(numero_cpf)
         

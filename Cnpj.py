@@ -11,7 +11,7 @@ class Cnpj:
         return Cnpj.monta_mascara(self.__numero_documento)
 
     @staticmethod
-    def cnpj_valido(numero_cnpj):
+    def valido(numero_cnpj):
         cnpj = CNPJ()
         # VALIDAÇÃO SE POSSUE APENAS ALGARISMOS NUMÉRICOS
         int(numero_cnpj)

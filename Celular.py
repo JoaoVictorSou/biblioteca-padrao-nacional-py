@@ -18,4 +18,4 @@ class Celular:
         
         return True if padrao.match(numero) else False
 
-celular = Celular("+55 (84) 9 9743-7563")
+        

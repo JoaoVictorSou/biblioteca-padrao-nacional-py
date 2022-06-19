@@ -14,8 +14,8 @@ class Celular:
     def valida(numero):
         # Máximo: +55 (84) 9 9743-7563
         # Mínimo: "84997437563"
-        padrao = re.compile("([+]?[0-9]{2,3})?[' ']?[(]?[0-9]{2}[)]?[' ']?[9][' ']?[0-9]{4}-?[0-9]{4}")
+        padrao = re.compile("([+]?[0-9]{2,3}[' ']?)?([(]?[0-9]{2}[)]?[' ']?)?([9][' ']?)([0-9]{4}-?[0-9]{4})")
         
         return True if padrao.match(numero) else False
 
-celular = Celular("84997437563")
+celular = Celular("+55 (84) 9 9743-7563")

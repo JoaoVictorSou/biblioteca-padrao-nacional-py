@@ -3,12 +3,25 @@ import re
 class Celular:
     def __init__(self, numero):
         if Celular.valida(numero):
-            self.__numero = numero
+            # O número será limpo, pois dessa forma poderá ter mais utilidade.
+            self.__numero = self.__limpa_numero(numero)
+            print(self.__numero)
         else:
             raise ValueError("Número é inválido!")
 
     def __str__(self):
         return Celular.monta_mascara(self.__numero)
+
+    # Função consumida no escopo da classe para despoluir o número.
+    def __limpa_numero(self, numero):
+        numero_limpo = numero.replace(" ", "")
+        numero_limpo = numero_limpo.replace("+", "")
+        numero_limpo = numero_limpo.replace("(", "")
+        numero_limpo = numero_limpo.replace(")", "")
+        numero_limpo = numero_limpo.replace("-", "")
+        numero_limpo = numero_limpo.strip()
+
+        return numero_limpo
 
     @staticmethod
     def valida(numero):

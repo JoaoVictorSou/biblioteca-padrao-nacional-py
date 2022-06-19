@@ -16,6 +16,3 @@ class Celular:
         padrao = re.compile("[(][0-9]{2}[)][9][0-9]{4}-[0-9]{4}")
         
         return True if padrao.match(numero) else False
-    
-celular = Celular("(84)98755-3968")
-print(celular)
